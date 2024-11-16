@@ -1,0 +1,237 @@
+/* Menu Page Specific Styles */
+
+.menu-container {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.menu-container h2 {
+    text-align: center;
+    color: var(--color-dark);
+    margin-bottom: 40px;
+    font-size: 2.5em;
+}
+
+.menu-section {
+    margin-bottom: 50px;
+}
+
+.menu-section h3 {
+    color: var(--color-brown);
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--color-brown);
+    margin-bottom: 30px;
+    font-size: 1.8em;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+.menu-item {
+    background-color: var(--color-light);
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 3px 6px rgba(108, 78, 49, 0.15);
+    transition: all 0.3s ease;
+}
+
+.menu-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(108, 78, 49, 0.2);
+}
+
+.menu-item img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    object-fit: cover;
+}
+
+.menu-item h4 {
+    color: var(--color-dark);
+    margin-bottom: 10px;
+    font-size: 1.3em;
+}
+
+.menu-item .description {
+    color: var(--color-brown);
+    font-size: 0.95em;
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.menu-item .price {
+    color: var(--color-dark);
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+@media screen and (max-width: 960px) {
+    .menu-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .menu-container {
+        padding: 30px 15px;
+    }
+
+    .menu-container h2 {
+        font-size: 2em;
+    }
+
+    .menu-section h3 {
+        font-size: 1.5em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .menu-item img {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+/* Menu Filters Styles */
+.menu-filters {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 40px;
+    padding: 15px;
+    background-color: var(--color-light);
+    border-radius: 50px;
+    box-shadow: 0 2px 10px rgba(108, 78, 49, 0.1);
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    background: transparent;
+    color: var(--color-brown);
+    border: none;
+    padding: 12px 24px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.filter-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-brown);
+    border-radius: 25px;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+    z-index: -1;
+}
+
+.filter-btn:hover {
+    color: var(--color-light);
+}
+
+.filter-btn:hover::before {
+    transform: scaleX(1);
+}
+
+.filter-btn.active {
+    background-color: var(--color-brown);
+    color: var(--color-light);
+    box-shadow: 0 4px 12px rgba(108, 78, 49, 0.2);
+}
+
+/* Add animation for menu items */
+.menu-section {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.menu-section.fade-out {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.menu-section.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Notification Styles */
+.notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--color-brown);
+    color: var(--color-light);
+    padding: 12px 24px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(100px);
+    opacity: 0;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.notification.show {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Counter Badge */
+.menu-filters .filter-btn .count {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: var(--color-dark);
+    color: var(--color-light);
+    font-size: 0.75rem;
+    padding: 2px 6px;
+    border-radius: 10px;
+    min-width: 20px;
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    .menu-filters {
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .filter-btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .menu-filters {
+        flex-direction: column;
+        border-radius: 15px;
+    }
+
+    .filter-btn {
+        width: 100%;
+        text-align: center;
+    }
+}

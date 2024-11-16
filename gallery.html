@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Cozy Corner Coffee Shop</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/gallery.css">
+    <script src="js/gallery.js" defer></script>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="header">
+            <div class="logo">
+                <svg width="60" height="60" viewBox="0 0 60 60">
+                    <circle cx="30" cy="30" r="25" fill="#6C4E31"/>
+                    <circle cx="30" cy="30" r="20" fill="#603F26"/>
+                    <text x="30" y="35" text-anchor="middle" fill="white" font-size="12">COZY</text>
+                </svg>
+            </div>
+            <h1>Cozy Corner Coffee</h1>
+        </div>
+
+        <div id="nav">
+            <a href="index.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="about.html">About</a>
+            <a href="location.html">Location</a>
+            <a href="gallery.html" class="active">Gallery</a>
+            <a href="events.html">Events</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+        </div>
+
+        <div id="content">
+            <div class="gallery-container">
+                <h2>Our Gallery</h2>
+                
+                <div class="gallery-filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="coffee">Coffee</button>
+                    <button class="filter-btn" data-filter="food">Food</button>
+                    <button class="filter-btn" data-filter="ambience">Ambience</button>
+                </div>
+
+                <div class="gallery-grid">
+                    <div class="gallery-item coffee">
+                        <img src="images/gallery/coffee-art.jpg" alt="Coffee Art">
+                        <div class="item-overlay">
+                            <h3>Latte Art</h3>
+                            <p>Handcrafted with love</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item food">
+                        <img src="images/gallery/pastries.jpg" alt="Pastries">
+                        <div class="item-overlay">
+                            <h3>Fresh Pastries</h3>
+                            <p>Baked daily</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item ambience">
+                        <img src="images/gallery/cafe-interior.webp" alt="Cafe Interior">
+                        <div class="item-overlay">
+                            <h3>Cozy Corner</h3>
+                            <p>Perfect spot to relax</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item coffee">
+                        <img src="images/gallery/coffee-beans.webp" alt="Coffee Beans">
+                        <div class="item-overlay">
+                            <h3>Premium Beans</h3>
+                            <p>Sourced globally</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item food">
+                        <img src="images/gallery/desserts.jpg" alt="Desserts">
+                        <div class="item-overlay">
+                            <h3>Sweet Treats</h3>
+                            <p>Homemade desserts</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item ambience">
+                        <img src="images/gallery/outdoor-seating.jpg" alt="Outdoor Seating">
+                        <div class="item-overlay">
+                            <h3>Outdoor Space</h3>
+                            <p>Enjoy fresh air</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="footer">
+            <div class="footer-content">
+                <div class="contact-info">
+                    <p>📞 (123) 456-7890</p>
+                    <p>📧 info@cozycorner.com</p>
+                </div>
+                <div class="social-links">
+                    <a href="https://facebook.com">Facebook</a>
+                    <a href="https://instagram.com">Instagram</a>
+                    <a href="https://twitter.com">Twitter</a>
+                </div>
+                <p class="copyright">© 2024 Cozy Corner Coffee. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

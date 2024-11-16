@@ -1,0 +1,311 @@
+/* Home Page Specific Styles */
+
+/* Hero/Advertisement Section */
+#advert {
+    background-color: var(--color-medium);
+    height: 500px;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/featured/advert.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+.hero-text {
+    background-color: rgba(255, 234, 197, 0.9);
+    padding: 30px 50px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    width: 90%;
+    transition: all 0.8s ease;
+}
+
+.hero-text h2 {
+    color: var(--color-dark);
+    font-size: 2.5em;
+    margin-bottom: 15px;
+}
+
+.hero-text p {
+    color: var(--color-brown);
+    font-size: 1.2em;
+    margin-bottom: 25px;
+}
+
+.hero-text button {
+    background-color: var(--color-brown);
+    color: var(--color-light);
+    border: none;
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.hero-text button:hover {
+    background-color: var(--color-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Featured Items Section */
+.featured-items {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.featured-items h2 {
+    text-align: center;
+    color: var(--color-dark);
+    font-size: 2.2em;
+    margin-bottom: 40px;
+}
+
+/* Coffee Grid */
+.coffee-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.coffee-card {
+    background-color: var(--color-light);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.coffee-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+.coffee-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.coffee-card:hover img {
+    transform: scale(1.05);
+}
+
+.coffee-card h3 {
+    color: var(--color-dark);
+    font-size: 1.4em;
+    margin: 15px;
+}
+
+.coffee-card .description {
+    color: var(--color-brown);
+    margin: 0 15px 10px;
+    font-size: 0.95em;
+    line-height: 1.5;
+}
+
+.coffee-card .price {
+    color: var(--color-dark);
+    font-weight: bold;
+    font-size: 1.2em;
+    margin: 0 15px 15px;
+}
+
+.coffee-card .order-btn {
+    background-color: var(--color-brown);
+    color: var(--color-light);
+    border: none;
+    padding: 10px 20px;
+    margin: 0 15px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    opacity: 0;
+    transform: translateY(10px);
+}
+
+.coffee-card:hover .order-btn {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.coffee-card .order-btn:hover {
+    background-color: var(--color-dark);
+}
+
+/* About Preview Section */
+.about-preview {
+    background-color: var(--color-light);
+    padding: 40px;
+    border-radius: 12px;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+}
+
+.about-preview h2 {
+    color: var(--color-dark);
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.about-preview p {
+    color: var(--color-brown);
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.about-preview button {
+    background-color: transparent;
+    color: var(--color-brown);
+    border: 2px solid var(--color-brown);
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.about-preview button:hover {
+    background-color: var(--color-brown);
+    color: var(--color-light);
+    transform: translateY(-2px);
+}
+
+/* Loading States */
+.coffee-card img.loading {
+    opacity: 0.5;
+    background-color: var(--color-medium);
+}
+
+/* Notification Styles */
+.notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--color-brown);
+    color: var(--color-light);
+    padding: 15px 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(100px);
+    opacity: 0;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1200px) {
+    .featured-items {
+        padding: 40px 20px;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .coffee-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .hero-text h2 {
+        font-size: 2em;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #advert {
+        height: 400px;
+    }
+
+    .hero-text {
+        padding: 25px;
+    }
+
+    .hero-text h2 {
+        font-size: 1.8em;
+    }
+
+    .hero-text p {
+        font-size: 1em;
+    }
+
+    .about-preview {
+        padding: 30px 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .coffee-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-text {
+        width: 95%;
+        padding: 20px;
+    }
+
+    .hero-text h2 {
+        font-size: 1.5em;
+    }
+
+    .featured-items h2 {
+        font-size: 1.8em;
+    }
+
+    .about-preview {
+        padding: 20px;
+    }
+
+    .about-preview h2 {
+        font-size: 1.6em;
+    }
+
+    .about-preview p {
+        font-size: 1em;
+    }
+
+    .notification {
+        left: 20px;
+        right: 20px;
+        text-align: center;
+    }
+}

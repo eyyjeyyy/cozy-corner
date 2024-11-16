@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Cozy Corner Coffee Shop</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/blog.css">
+    <script src="js/blog.js" defer></script>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="header">
+            <div class="logo">
+                <svg width="60" height="60" viewBox="0 0 60 60">
+                    <circle cx="30" cy="30" r="25" fill="#6C4E31"/>
+                    <circle cx="30" cy="30" r="20" fill="#603F26"/>
+                    <text x="30" y="35" text-anchor="middle" fill="white" font-size="12">COZY</text>
+                </svg>
+            </div>
+            <h1>Cozy Corner Coffee</h1>
+        </div>
+
+        <div id="nav">
+            <a href="index.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="about.html">About</a>
+            <a href="location.html">Location</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="events.html">Events</a>
+            <a href="blog.html" class="active">Blog</a>
+            <a href="contact.html">Contact</a>
+        </div>
+
+        <div id="content">
+            <div class="blog-container">
+                <h2>Coffee Blog</h2>
+
+                <div class="blog-header">
+                    <div class="search-bar">
+                        <input type="text" placeholder="Search articles...">
+                        <button class="search-btn">Search</button>
+                    </div>
+
+                    <div class="blog-categories">
+                        <button class="category-btn active">All</button>
+                        <button class="category-btn">Brewing Tips</button>
+                        <button class="category-btn">Coffee Origins</button>
+                        <button class="category-btn">Recipes</button>
+                    </div>
+                </div>
+
+                <div class="featured-post">
+                    <img src="images/blog/featured-post.jfif" alt="Featured Blog Post">
+                    <div class="post-info">
+                        <span class="post-category">Brewing Tips</span>
+                        <h3>The Perfect Pour-Over Coffee Guide</h3>
+                        <p class="post-excerpt">Master the art of pour-over coffee with our comprehensive guide to achieving the perfect brew every time.</p>
+                        <div class="post-meta">
+                            <span class="post-date">📅 November 12, 2024</span>
+                            <span class="read-time">⏱️ 5 min read</span>
+                        </div>
+                        <button class="read-more">Read Article</button>
+                    </div>
+                </div>
+
+                <div class="blog-grid">
+                    <article class="blog-card">
+                        <img src="images/blog/ethopian-coffee.jfif" alt="Coffee Origins">
+                        <div class="card-content">
+                            <span class="post-category">Coffee Origins</span>
+                            <h4>Ethiopian Coffee: A Rich Heritage</h4>
+                            <p>Explore the birthplace of coffee and its cultural significance.</p>
+                            <div class="post-meta">
+                                <span class="post-date">Nov 10, 2024</span>
+                                <span class="read-time">4 min read</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="blog-card">
+                        <img src="images/blog/iced-caramel.jpg" alt="Coffee Recipe">
+                        <div class="card-content">
+                            <span class="post-category">Recipes</span>
+                            <h4>Iced Caramel Macchiato Recipe</h4>
+                            <p>Create this café favorite in the comfort of your home.</p>
+                            <div class="post-meta">
+                                <span class="post-date">Nov 8, 2024</span>
+                                <span class="read-time">3 min read</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="blog-card">
+                        <img src="images/blog/french-press.webp" alt="Brewing Guide">
+                        <div class="card-content">
+                            <span class="post-category">Brewing Tips</span>
+                            <h4>French Press Mastery</h4>
+                            <p>Perfect your French press technique with these expert tips.</p>
+                            <div class="post-meta">
+                                <span class="post-date">Nov 5, 2024</span>
+                                <span class="read-time">6 min read</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="pagination">
+                    <button class="page-btn">Previous</button>
+                    <button class="page-btn active">1</button>
+                    <button class="page-btn">2</button>
+                    <button class="page-btn">3</button>
+                    <button class="page-btn">Next</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="footer">
+            <div class="footer-content">
+                <div class="contact-info">
+                    <p>📞 (123) 456-7890</p>
+                    <p>📧 info@cozycorner.com</p>
+                </div>
+                <div class="social-links">
+                    <a href="https://facebook.com">Facebook</a>
+                    <a href="https://instagram.com">Instagram</a>
+                    <a href="https://twitter.com">Twitter</a>
+                </div>
+                <p class="copyright">© 2024 Cozy Corner Coffee. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

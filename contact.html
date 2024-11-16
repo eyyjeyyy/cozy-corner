@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Cozy Corner Coffee Shop</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <script src="js/contact.js" defer></script>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="header">
+            <div class="logo">
+                <svg width="60" height="60" viewBox="0 0 60 60">
+                    <circle cx="30" cy="30" r="25" fill="#6C4E31"/>
+                    <circle cx="30" cy="30" r="20" fill="#603F26"/>
+                    <text x="30" y="35" text-anchor="middle" fill="white" font-size="12">COZY</text>
+                </svg>
+            </div>
+            <h1>Cozy Corner Coffee</h1>
+        </div>
+
+        <div id="nav">
+            <a href="index.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="about.html">About</a>
+            <a href="location.html">Location</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="events.html">Events</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html" class="active">Contact</a>
+        </div>
+
+        <div id="content">
+            <div class="contact-container">
+                <h2>Get in Touch</h2>
+
+                <div class="contact-grid">
+                    <div class="contact-form-section">
+                        <h3>Send us a Message</h3>
+                        <form class="contact-form">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <select id="subject" name="subject" required>
+                                    <option value="">Select a subject</option>
+                                    <option value="general">General Inquiry</option>
+                                    <option value="reservation">Reservation</option>
+                                    <option value="event">Event Booking</option>
+                                    <option value="feedback">Feedback</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="5" required></textarea>
+                            </div>
+
+                            <button type="submit" class="submit-btn">Send Message</button>
+                        </form>
+                    </div>
+
+                    <div class="contact-info-section">
+                        <div class="info-card">
+                            <h3>Visit Us</h3>
+                            <div class="map-container">
+                                <img src="images/map/location.jpeg" alt="Location Map" class="contact-map">
+                            </div>
+                            <address>
+                                <p>📍 123 Coffee Street</p>
+                                <p>Downtown District</p>
+                                <p>City, State 12345</p>
+                            </address>
+                        </div>
+
+                        <div class="info-card">
+                            <h3>Business Hours</h3>
+                            <ul class="hours-list">
+                                <li><span>Monday - Friday:</span> 7:00 AM - 8:00 PM</li>
+                                <li><span>Saturday:</span> 8:00 AM - 9:00 PM</li>
+                                <li><span>Sunday:</span> 9:00 AM - 6:00 PM</li>
+                            </ul>
+                        </div>
+
+                        <div class="info-card">
+                            <h3>Quick Contact</h3>
+                            <div class="quick-contact">
+                                <p>📞 (123) 456-7890</p>
+                                <p>📧 info@cozycorner.com</p>
+                                <div class="social-links">
+                                    <a href="#" class="social-btn">Facebook</a>
+                                    <a href="#" class="social-btn">Instagram</a>
+                                    <a href="#" class="social-btn">Twitter</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-section">
+                    <h3>Frequently Asked Questions</h3>
+                    <div class="faq-grid">
+                        <div class="faq-item">
+                            <h4>Do you take reservations?</h4>
+                            <p>Yes, we accept reservations for groups of 6 or more. Please call us or use our contact form.</p>
+                        </div>
+                        <div class="faq-item">
+                            <h4>Is there parking available?</h4>
+                            <p>We have free parking available both in front and behind our building.</p>
+                        </div>
+                        <div class="faq-item">
+                            <h4>Do you offer WiFi?</h4>
+                            <p>Yes, we offer free WiFi to all our customers. Ask your server for the password.</p>
+                        </div>
+                        <div class="faq-item">
+                            <h4>Can I book for private events?</h4>
+                            <p>Yes, we offer private event bookings. Contact us for more information.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="footer">
+            <div class="footer-content">
+                <div class="contact-info">
+                    <p>📞 (123) 456-7890</p>
+                    <p>📧 info@cozycorner.com</p>
+                </div>
+                <div class="social-links">
+                    <a href="https://facebook.com">Facebook</a>
+                    <a href="https://instagram.com">Instagram</a>
+                    <a href="https://twitter.com">Twitter</a>
+                </div>
+                <p class="copyright">© 2024 Cozy Corner Coffee. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

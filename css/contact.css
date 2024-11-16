@@ -1,0 +1,394 @@
+/* Base Contact Page Styles */
+.contact-container {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-container h2 {
+    text-align: center;
+    color: var(--color-dark);
+    margin-bottom: 40px;
+    font-size: 2.5em;
+}
+
+/* Contact Grid Layout */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 50px;
+}
+
+/* Contact Form Styles */
+.contact-form-section {
+    background-color: var(--color-light);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 3px 6px rgba(108, 78, 49, 0.15);
+}
+
+.contact-form-section h3 {
+    color: var(--color-dark);
+    margin-bottom: 25px;
+    font-size: 1.8em;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    position: relative; /* Added for validation status positioning */
+}
+
+.form-group label {
+    color: var(--color-brown);
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 12px;
+    border: 2px solid var(--color-brown);
+    border-radius: 6px;
+    font-size: 1em;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--color-dark);
+}
+
+/* Form Validation Styles */
+.validation-status {
+    position: absolute;
+    right: -25px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.validation-status.valid::after {
+    content: '✓';
+    color: #4CAF50;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.validation-status.invalid::after {
+    content: '×';
+    color: #f44336;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.validation-message {
+    color: #f44336;
+    font-size: 0.8em;
+    margin-top: 5px;
+    transition: opacity 0.3s ease;
+}
+
+/* Submit Button Styles */
+.submit-btn {
+    background-color: var(--color-brown);
+    color: var(--color-light);
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: all 0.3s ease;
+    align-self: flex-start;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.submit-btn:hover {
+    background-color: var(--color-dark);
+    transform: translateY(-2px);
+}
+
+/* Spinner Animation */
+.spinner {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgba(255,255,255,0.3);
+    border-radius: 50%;
+    border-top-color: #fff;
+    animation: spin 1s ease-in-out infinite;
+    margin-right: 10px;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Contact Info Styles */
+.contact-info-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.info-card {
+    background-color: var(--color-light);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 6px rgba(108, 78, 49, 0.15);
+}
+
+.info-card h3 {
+    color: var(--color-dark);
+    margin-bottom: 20px;
+    font-size: 1.5em;
+}
+
+/* Map Styles */
+.map-container {
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.map-container:hover {
+    transform: scale(1.02);
+}
+
+.contact-map {
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* Map Modal Styles */
+.map-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: fadeIn 0.3s ease;
+}
+
+.map-modal-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.map-controls {
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+    display: flex;
+    gap: 10px;
+}
+
+.map-controls button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    background: var(--color-brown);
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* FAQ Section Styles */
+.faq-section {
+    margin-top: 50px;
+}
+
+.faq-section h3 {
+    color: var(--color-dark);
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2em;
+}
+
+.faq-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.faq-item {
+    background-color: var(--color-light);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 6px rgba(108, 78, 49, 0.15);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.faq-item h4 {
+    color: var(--color-dark);
+    margin-bottom: 15px;
+    font-size: 1.2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-arrow {
+    transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-arrow {
+    transform: rotate(90deg);
+}
+
+.faq-item p {
+    color: var(--color-brown);
+    line-height: 1.5;
+    margin-top: 10px;
+}
+
+/* Business Hours Styles */
+.hours-list {
+    list-style: none;
+}
+
+.hours-list li {
+    color: var(--color-brown);
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+}
+
+.current-hours {
+    font-weight: bold;
+    background-color: rgba(108, 78, 49, 0.1);
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+.status {
+    margin-left: 10px;
+    font-size: 0.9em;
+}
+
+.status.open {
+    color: #4CAF50;
+}
+
+.status.closed {
+    color: #f44336;
+}
+
+/* Notification Styles */
+.notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--color-brown);
+    color: var(--color-light);
+    padding: 12px 24px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(100px);
+    opacity: 0;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.notification.show {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Animation Keyframes */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.fade-out {
+    animation: fadeOut 0.3s ease;
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 960px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .faq-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .contact-container {
+        padding: 30px 15px;
+    }
+
+    .contact-container h2 {
+        font-size: 2em;
+    }
+
+    .submit-btn {
+        width: 100%;
+    }
+
+    .map-controls {
+        position: static;
+        margin-top: 20px;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 10px;
+    }
+
+    .info-card {
+        padding: 20px;
+    }
+
+    .hours-list li {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .validation-status {
+        right: 5px;
+    }
+}
